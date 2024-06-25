@@ -1,0 +1,15 @@
+# mkdocs.yml
+site_name: ODE Docs
+
+theme:
+  name: "material"
+
+plugins:
+  - mkdocstrings
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
+
+nav:
+  - ODE Docs: index.md
+  - reference.md

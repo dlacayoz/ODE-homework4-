@@ -382,19 +382,25 @@
 Its aim is to give us a framework to build our project documentation using Python, MkDocs, mkdocstrings, and the Material for MkDocs theme.</p>
 <p>In this homework, we work with three numerical methods well-known on computational fields; Euler's method, Runge-Kutta 2 and Runge-Kutta 4.</p>
 <h2 id="euler">Euler</h2>
-<p>The Euler's method can give us a good aproximation depending of the problem and the amout of iterations that we need in our solution. Generally, with this method, a calculus that is twice more precise require the twice of computational resources.</p>
+<p>The Euler's method can give us a good aproximation depending of the problem and the amount of iterations that we need in our solution. Generally, with this method, a calculus that is twice more precise require the twice of computational resources.</p>
 <p>Relevant equation:</p>
-<p>$result[i] = result[i - 1] + h * function(x0 + (i - 1) * h, result[i - 1])$</p>
+<p>$$
+result[i] = result[i - 1] + h * function(x_0 + (i - 1) * h, result[i - 1])
+$$</p>
 <h2 id="rk2">RK2</h2>
 <p>The Runge-Kutta method is in fact a family of different order methods which bring us a better aproximation without the necessity to consider higher orders in the Taylor's expansion of Euler's method. We want to avoid this last point, because of the fact that is complicated to know the derivate of the function which we are evaluating in the right side of the ODE.</p>
-<p>The idea of RK2 method is to use the middle point in order to evaluate the Euler's method. Euler's method is applied in the point $t$ to evaluate the derivate to approximate the function in the point $x = t + h$; for the other hand RK2 method use the middle point $t + h/2$, obtaining a better aproximation for the same value of $h$.</p>
+<p>The idea of RK2 method is to use the middle point in order to evaluate the Euler's method. Euler's method is applied in the point $$t$$ to evaluate the derivate to approximate the function in the point $$x = t + h;$$ for the other hand RK2 method use the middle point $$t + h/2,$$ obtaining a better aproximation for the same value of $$h.$$</p>
 <p>Relevant equation:</p>
-<p>$result[i] = result[i - 1] + 0.5 * (k1 + k2)$</p>
+<p>$$
+result[i] = result[i - 1] + 0.5 * (k_1 + k_2)
+$$</p>
 <h2 id="rk4">RK4</h2>
-<p>The last metodology can applied even to more points between $x(t)$ and $X(t + h)$, making Taylor's expansions. In that case, it can to group terms of order $h³$, $h⁴$, etc.; to cancell those expresions.</p>
-<p>The problem to do this is that expresions involve more complicated when we increase the aproximation order. In general terms, the rule is that $4^{\rm to} order correspond to the best compromise between complexity and aproximation error. This method is the most used commonly in order to resolve ODEs.</p>
+<p>The last metodology can applied even to more points between $$x(t)$$ and $$x(t + h),$$ making Taylor's expansions. In that case, it can to group terms of order $$h^3, h^4, $$ etc.; to cancell those expresions.</p>
+<p>The problem to do this is that expresions involve more complicated when we increase the aproximation order. In general terms, the rule is that $$4^{\rm t_o}$$ order correspond to the best compromise between complexity and aproximation error. This method is the most used commonly in order to resolve ODEs.</p>
 <p>Relevant equation:</p>
-<p>$result[i] = result[i - 1] + (k1 + 2 * k2 + 2 * k3 + k4) / 6$</p>
+<p>$$
+result[i] = result[i - 1] + (k_1 + 2 * k_2 + 2 * k_3 + k_4) / 6
+$$</p>
 <h2 id="project-layout">Project layout</h2>
 <pre><code>mkdocs.yml        # The configuration file.
 docs/
@@ -487,9 +493,7 @@ docs/
     
       <script src="assets/javascripts/bundle.ad660dcc.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js"></script>
-      
-        <script src="js/mathjax_config.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>

@@ -9,7 +9,7 @@ In this homework, we work with three numerical methods well-known on computation
 
 ## Euler
 
-The Euler's method can give us a good aproximation depending of the problem and the amout of iterations that we need in our solution. Generally, with this method, a calculus that is twice more precise require the twice of computational resources.
+The Euler's method can give us a good aproximation depending of the problem and the amount of iterations that we need in our solution. Generally, with this method, a calculus that is twice more precise require the twice of computational resources.
 
 Relevant equation:
 
@@ -31,14 +31,14 @@ $$
 
 ## RK4
 
-The last metodology can applied even to more points between $$x(t)$$ and $$x(t + h)$$, making Taylor's expansions. In that case, it can to group terms of order $$h^3, h^4, $$ etc.; to cancell those expresions.
+The last metodology can applied even to more points between $$x(t)$$ and $$x(t + h),$$ making Taylor's expansions. In that case, it can to group terms of order $$h^3, h^4, $$ etc.; to cancell those expresions.
 
 The problem to do this is that expresions involve more complicated when we increase the aproximation order. In general terms, the rule is that $$4^{\\rm t_o}$$ order correspond to the best compromise between complexity and aproximation error. This method is the most used commonly in order to resolve ODEs.
 
 Relevant equation:
 
 $$
-result[i] = result[i - 1] + (k_1 + 2 * kh_2 + 2 * k_3 + k_4) / 6
+result[i] = result[i - 1] + (k_1 + 2 * k_2 + 2 * k_3 + k_4) / 6
 $$
 
 ## Project layout
